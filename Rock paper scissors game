@@ -1,0 +1,30 @@
+import random
+
+pScore = 0
+cScore =0
+for i in range(10):
+  person = input   ("Rock=1\nPaper=2\nScissors=3\n")
+  choice = ["Rock","Paper","Scissors"]
+  computer = random.choice(choice)
+  print (computer)
+  
+  
+  if (person == "1" and computer == "Scissors") or (person == "2" and computer == "Rock") or (person == "3" and computer == "Paper"):
+    print("You Win!") 
+    pScore += 1
+  elif (person == "1" and computer == "Rock") or (person == "2" and computer == "Paper") or (person == "3" and computer == "Scissors"):
+    print("You tie")
+  else:
+    print("You Lose!")
+    cScore += 1
+
+print("Score:\n")
+print("You: ",pScore)
+print("Computer: ",cScore)
+
+if pScore > cScore:
+  print ("You win!")
+elif pScore == cScore:
+  print("You tie!")
+else:
+  print("You lose!")
